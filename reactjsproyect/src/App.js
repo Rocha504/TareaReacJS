@@ -19,9 +19,9 @@ function App() {
 
 
   function hecha (a) {
-    const newTodos = [...estado];
-    newTodos[a].completed = !newTodos[a].completed;
-    setTareas(newTodos);
+    const nuevasTareas = [...estado];
+    nuevasTareas[a].completed = !nuevasTareas[a].completed;
+    Tareas(nuevasTareas);
   };
 
   function addTarea (prop){
@@ -31,8 +31,8 @@ function App() {
   };
 
   function EliminarIndividual () {
-    const filteredtareas = estado.filter((tarea) => !tarea.completed);
-    Tareas(filteredTareas);
+    const AT = estado.filter((tarea) => !tarea.completed);
+    Tareas(AT);
   };
 
   function eliminar () {
@@ -41,7 +41,24 @@ function App() {
 
   
   return (
-      
+    <div className="container">
+    <h1>Cosas por hacer</h1>
+    <form onSubmit={addTarea}>
+      <input
+        type="text"
+        value={otraTarea}
+        onChange={(e) => setOtraTarea(e.target.value)}
+      />
+      <button type="submit">Agregar</button>
+    </form>
+
+    {estado.map((todo, indice) => (
+      <Guardado key={indice} indice={indice} todo={todo} hecha={hecha}/> 
+      ))}
+
+    <button onClick={eliminar}>Eliminar </button>
+    <button onClick={EliminarIndividual}>Eliminar tareas realizadas</button>
+  </div>
   );
 }
 
