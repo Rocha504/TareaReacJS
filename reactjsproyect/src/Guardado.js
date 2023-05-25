@@ -2,7 +2,6 @@ import React from 'react';
 
 function Guardado ({ cajas, indice, all}) {
   return (
-    // Este componente retorna un div que contiene un checkbox y un span que muestra el texto de la tarea.
     <div>
       <input 
         type="checkbox" 

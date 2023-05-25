@@ -18,7 +18,7 @@ function App() {
   }, [estado]);
 
 
-  function hecha (a) {
+  function cajas (a) {
     const nuevasTareas = [...estado];
     nuevasTareas[a].completed = !nuevasTareas[a].completed;
     Tareas(nuevasTareas);
@@ -41,7 +41,7 @@ function App() {
 
   
   return (
-    <div className="container">
+    <div className="centrado">
     <h1>Cosas por hacer</h1>
     <form onSubmit={addTarea}>
       <input
@@ -52,8 +52,8 @@ function App() {
       <button type="submit">Agregar</button>
     </form>
 
-    {estado.map((todo, indice) => (
-      <Guardado key={indice} indice={indice} todo={todo} hecha={hecha}/> 
+    {estado.map((all, indice) => (
+      <Guardado key={indice} indice={indice} all={all} cajas={cajas}/> 
       ))}
 
     <button onClick={eliminar}>Eliminar </button>
