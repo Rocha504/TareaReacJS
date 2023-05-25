@@ -2,7 +2,7 @@ import React from 'react';
 
 function Guardado ({ cajas, indice, all}) {
   return (
-    <div>
+    <div classname="fondo">
       <input 
         type="checkbox" 
         checked={all.completed} 

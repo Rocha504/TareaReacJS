@@ -42,7 +42,7 @@ function App() {
 
   
   return (
-    <div className="centrado">
+    <div className="fondo">
     <h1>Cosas por hacer <br/></h1>
     <form onSubmit={addTarea}>
       <input type="text" value={otraTarea} onChange={(e) => setOtraTarea(e.target.value)}/>
@@ -53,7 +53,7 @@ function App() {
       <Guardado key={indice} indice={indice} all={all} cajas={cajas}/> ))}
 
     <button onClick={EliminarIndividual}>Quitar seleccionado</button>
-    <button onClick={eliminar}>Eliminar </button>
+    <button onClick={eliminar}>Eliminar Tareas </button>
      
   </div>
   );
