@@ -8,9 +8,7 @@ function Guardado ({ cajas, indice, all}) {
         checked={all.completed} 
         onChange={() => cajas(indice)} 
       />
-      <span style={{ textDecoration: all.completed ? "line-through" : "" }}>
         {all.text}
-      </span>
     </div>
   );
 };

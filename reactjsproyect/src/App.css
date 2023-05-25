@@ -13,6 +13,11 @@
   }
 }
 
+.fondo {
+  background: linear-gradient(to right, #de1111, #280990);
+  
+}
+
 .centrado{
   display: flex;
   justify-content: center;
