@@ -47,7 +47,7 @@ function App() {
     <form onSubmit={addTarea}>
       <input type="text" value={otraTarea} onChange={(e) => setOtraTarea(e.target.value)}/>
       
-      <button style={{margin:'10px'}} type="submit">Agregar</button>
+      <button style={{margin:'10px'}} type="submit">Agregar Tarea</button>
     </form>
 
     {estado.map((all, indice) => (
